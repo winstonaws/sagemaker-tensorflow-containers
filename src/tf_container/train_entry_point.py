@@ -133,6 +133,7 @@ def train():
     # only creating a parameter servers for distributed runs
     if len(env.hosts) > 1:
         _run_ps_server(env.current_host, env.hosts, tf_config)
+        time.sleep(20)
 
     save_tf_config_env_var(tf_config)
 
